@@ -1,0 +1,16 @@
+[
+{
+  "modid": "domesticdecor",
+  "name": "Domestic Decor",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mnesikos", "kmfisk"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["forge"]
+}
+]

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:bowls/dd_water_bowl" },
+    "facing=west": { "model": "domesticdecor:bowls/dd_water_bowl", "y": 90 },
+    "facing=north": { "model": "domesticdecor:bowls/dd_water_bowl", "y": 180 },
+    "facing=east": { "model": "domesticdecor:bowls/dd_water_bowl", "y": 270 }
+  }
+}

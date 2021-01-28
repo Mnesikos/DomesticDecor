@@ -1,9 +1,10 @@
 {
+	"parent": "block/block",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "blocks/glazed_terracotta_white",
 		"1": "blocks/wool_colored_white",
-		"2": "blocks/chain",
+		"2": "domesticdecor:blocks/chain",
 		"particle": "blocks/glazed_terracotta_white"
 	},
 	"elements": [

@@ -1,11 +1,12 @@
 {
+	"parent": "block/block",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "blocks/stone_diorite_smooth",
 		"1": "blocks/concrete_gray",
 		"3": "blocks/concrete_red",
 		"4": "blocks/wool_colored_red",
-		"5": "domestic decor/carrier",
+		"5": "domesticdecor:blocks/carrier",
 		"particle": "blocks/stone_diorite_smooth"
 	},
 	"elements": [

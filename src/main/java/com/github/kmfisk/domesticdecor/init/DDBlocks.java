@@ -3,23 +3,25 @@ package com.github.kmfisk.domesticdecor.init;
 import com.github.kmfisk.domesticdecor.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class DDBlocks {
-    public static final BlockAnimalHut ANIMAL_HUT = new BlockAnimalHut("animal_hut", Material.CLOTH);
-    public static final BlockBirdFeeder BIRD_FEEDER = new BlockBirdFeeder("bird_feeder", Material.WOOD);
-    public static final BlockBirdHouse BIRD_HOUSE = new BlockBirdHouse("bird_house", Material.WOOD);
-    public static final BlockBucket BUCKET = new BlockBucket("bucket", Material.IRON);
-    public static final BlockCarrier CARRIER = new BlockCarrier("carrier", Material.CIRCUITS);
+    public static final BlockAnimalHut ANIMAL_HUT = new BlockAnimalHut("animal_hut", Material.CLOTH); // COLORED
+    public static final BlockBirdFeeder BIRD_FEEDER = new BlockBirdFeeder("bird_feeder", Material.WOOD); // WOODS
+    public static final BlockBirdHouse BIRD_HOUSE = new BlockBirdHouse("bird_house", Material.WOOD); // WOODS
+    public static final BlockBucket BUCKET = new BlockBucket("bucket", Material.IRON); // ETC
+    public static final BlockCarrier CARRIER = new BlockCarrier("carrier", Material.CIRCUITS); // COLORED
     public static final BlockChickenFeeder CHICKEN_FEEDER = new BlockChickenFeeder("chicken_feeder", Material.CIRCUITS);
-    public static final BlockChickenWaterer CHICKEN_WATERER = new BlockChickenWaterer("chicken_waterer", Material.CIRCUITS);
-    public static final BlockChickFeeder CHICK_FEEDER = new BlockChickFeeder("chick_feeder", Material.CIRCUITS);
-    public static final BlockChickWaterer CHICK_WATERER = new BlockChickWaterer("chick_waterer", Material.CIRCUITS);
-    public static final BlockDoubleBowl DOUBLE_BOWL = new BlockDoubleBowl("double_bowl", Material.CIRCUITS);
-    public static final BlockFoodBowl FOOD_BOWL = new BlockFoodBowl("food_bowl", Material.CIRCUITS);
-    public static final BlockSaddleStand SADDLE_STAND = new BlockSaddleStand("saddle_stand", Material.WOOD);
-    public static final BlockWaterBowl WATER_BOWL = new BlockWaterBowl("water_bowl", Material.CIRCUITS);
+    public static final BlockChickenWaterer CHICKEN_WATERER = new BlockChickenWaterer("chicken_waterer", Material.CIRCUITS); // COLORED
+    // TODO: https://forums.minecraftforge.net/topic/65483-1102-partially-transparent-block-forge-multilayer-isnt-working/page/2/
+    public static final BlockChickFeeder CHICK_FEEDER = new BlockChickFeeder("chick_feeder", Material.CIRCUITS); // COLORED
+    public static final BlockChickWaterer CHICK_WATERER = new BlockChickWaterer("chick_waterer", Material.CIRCUITS); // COLORED
+    public static final BlockDoubleBowl DOUBLE_BOWL = new BlockDoubleBowl("double_bowl", Material.CIRCUITS); // COLORED
+    public static final BlockFoodBowl FOOD_BOWL = new BlockFoodBowl("food_bowl", Material.CIRCUITS); // COLORED
+    public static final BlockSaddleStand SADDLE_STAND = new BlockSaddleStand("saddle_stand", Material.WOOD); // WOODS, SADDLES
+    public static final BlockWaterBowl WATER_BOWL = new BlockWaterBowl("water_bowl", Material.CIRCUITS); // COLORED
 
     public static void register(IForgeRegistry<Block> registry) {
         registry.registerAll(
@@ -58,7 +60,22 @@ public class DDBlocks {
     }
 
     public static void registerModels() {
-        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT));
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.BLACK.getMetadata(), "animal_hut_black");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.BLUE.getMetadata(), "animal_hut_blue");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.BROWN.getMetadata(), "animal_hut_brown");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.CYAN.getMetadata(), "animal_hut_cyan");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.GRAY.getMetadata(), "animal_hut_gray");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.GREEN.getMetadata(), "animal_hut_green");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.LIGHT_BLUE.getMetadata(), "animal_hut_light_blue");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.LIME.getMetadata(), "animal_hut_lime");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.MAGENTA.getMetadata(), "animal_hut_magenta");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.ORANGE.getMetadata(), "animal_hut_orange");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.PINK.getMetadata(), "animal_hut_pink");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.PURPLE.getMetadata(), "animal_hut_purple");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.RED.getMetadata(), "animal_hut_red");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.SILVER.getMetadata(), "animal_hut_silver");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.WHITE.getMetadata(), "animal_hut_white");
+        ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.YELLOW.getMetadata(), "animal_hut_yellow");
         BIRD_FEEDER.registerItemModel(Item.getItemFromBlock(BIRD_FEEDER));
         BIRD_HOUSE.registerItemModel(Item.getItemFromBlock(BIRD_HOUSE));
         BUCKET.registerItemModel(Item.getItemFromBlock(BUCKET));

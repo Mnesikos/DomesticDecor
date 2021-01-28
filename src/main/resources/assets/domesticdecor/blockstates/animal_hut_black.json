@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:animal_hut/dd_animal_hut_black", "y": 90 },
+    "facing=west": { "model": "domesticdecor:animal_hut/dd_animal_hut_black", "y": 180 },
+    "facing=north": { "model": "domesticdecor:animal_hut/dd_animal_hut_black", "y": 270 },
+    "facing=east": { "model": "domesticdecor:animal_hut/dd_animal_hut_black" }
+  }
+}

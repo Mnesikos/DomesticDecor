@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:chicken_feeder/dd_chicken_feeder" },
+    "facing=west": { "model": "domesticdecor:chicken_feeder/dd_chicken_feeder", "y": 90 },
+    "facing=north": { "model": "domesticdecor:chicken_feeder/dd_chicken_feeder", "y": 180 },
+    "facing=east": { "model": "domesticdecor:chicken_feeder/dd_chicken_feeder", "y": 270 }
+  }
+}

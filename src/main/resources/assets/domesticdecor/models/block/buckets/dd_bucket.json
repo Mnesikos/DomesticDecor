@@ -1,8 +1,9 @@
 {
+	"parent": "block/block",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "domestic decor/bucket",
-		"particle": "domestic decor/bucket"
+		"0": "domesticdecor:blocks/bucket",
+		"particle": "domesticdecor:blocks/bucket"
 	},
 	"elements": [
 		{

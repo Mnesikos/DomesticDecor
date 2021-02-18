@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:bird_house/jungle_bird_house", "y": 270 },
+    "facing=west": { "model": "domesticdecor:bird_house/jungle_bird_house" },
+    "facing=north": { "model": "domesticdecor:bird_house/jungle_bird_house", "y": 90 },
+    "facing=east": { "model": "domesticdecor:bird_house/jungle_bird_house", "y": 180 }
+  }
+}

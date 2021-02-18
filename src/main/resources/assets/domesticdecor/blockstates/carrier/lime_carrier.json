@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:carrier/lime_carrier_straight", "y": 270 },
+    "facing=west": { "model": "domesticdecor:carrier/lime_carrier_straight" },
+    "facing=north": { "model": "domesticdecor:carrier/lime_carrier_straight", "y": 90 },
+    "facing=east": { "model": "domesticdecor:carrier/lime_carrier_straight", "y": 180 }
+  }
+}

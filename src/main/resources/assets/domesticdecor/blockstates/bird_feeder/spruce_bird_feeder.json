@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:bird_feeder/spruce_bird_feeder" },
+    "facing=west": { "model": "domesticdecor:bird_feeder/spruce_bird_feeder", "y": 90 },
+    "facing=north": { "model": "domesticdecor:bird_feeder/spruce_bird_feeder", "y": 180 },
+    "facing=east": { "model": "domesticdecor:bird_feeder/spruce_bird_feeder", "y": 270 }
+  }
+}

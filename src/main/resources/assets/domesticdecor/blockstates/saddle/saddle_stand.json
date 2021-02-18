@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "domesticdecor:saddle_stands/dd_saddle_stand" },
+    "facing=west": { "model": "domesticdecor:saddle_stands/dd_saddle_stand", "y": 90 },
+    "facing=north": { "model": "domesticdecor:saddle_stands/dd_saddle_stand", "y": 180 },
+    "facing=east": { "model": "domesticdecor:saddle_stands/dd_saddle_stand", "y": 270 }
+  }
+}

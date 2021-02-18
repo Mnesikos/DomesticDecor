@@ -13,11 +13,19 @@ public class DDBlocks {
     public static final BlockBirdHouse BIRD_HOUSE = new BlockBirdHouse("bird_house", Material.WOOD); // WOODS
     public static final BlockBucket BUCKET = new BlockBucket("bucket", Material.IRON); // ETC
     public static final BlockCarrier CARRIER = new BlockCarrier("carrier", Material.CIRCUITS); // COLORED
+<<<<<<< HEAD
     public static final BlockChickenFeeder CHICKEN_FEEDER = new BlockChickenFeeder("chicken_feeder", Material.CIRCUITS);
     public static final BlockChickenWaterer CHICKEN_WATERER = new BlockChickenWaterer("chicken_waterer", Material.CIRCUITS); // COLORED
     // TODO: https://forums.minecraftforge.net/topic/65483-1102-partially-transparent-block-forge-multilayer-isnt-working/page/2/
     public static final BlockChickFeeder CHICK_FEEDER = new BlockChickFeeder("chick_feeder", Material.CIRCUITS); // COLORED
     public static final BlockChickWaterer CHICK_WATERER = new BlockChickWaterer("chick_waterer", Material.CIRCUITS); // COLORED
+=======
+    // TODO: https://forums.minecraftforge.net/topic/65483-1102-partially-transparent-block-forge-multilayer-isnt-working/page/2/
+    public static final BlockChickFeeder CHICK_FEEDER = new BlockChickFeeder("chick_feeder", Material.CIRCUITS); // COLORED
+    public static final BlockChickWaterer CHICK_WATERER = new BlockChickWaterer("chick_waterer", Material.CIRCUITS); // COLORED
+    public static final BlockChickenFeeder CHICKEN_FEEDER = new BlockChickenFeeder("chicken_feeder", Material.CIRCUITS);
+    public static final BlockChickenWaterer CHICKEN_WATERER = new BlockChickenWaterer("chicken_waterer", Material.CIRCUITS); // COLORED
+>>>>>>> i hate git
     public static final BlockDoubleBowl DOUBLE_BOWL = new BlockDoubleBowl("double_bowl", Material.CIRCUITS); // COLORED
     public static final BlockFoodBowl FOOD_BOWL = new BlockFoodBowl("food_bowl", Material.CIRCUITS); // COLORED
     public static final BlockSaddleStand SADDLE_STAND = new BlockSaddleStand("saddle_stand", Material.WOOD); // WOODS, SADDLES
@@ -60,6 +68,7 @@ public class DDBlocks {
     }
 
     public static void registerModels() {
+<<<<<<< HEAD
         ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.BLACK.getMetadata(), "animal_hut_black");
         ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.BLUE.getMetadata(), "animal_hut_blue");
         ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.BROWN.getMetadata(), "animal_hut_brown");
@@ -76,6 +85,11 @@ public class DDBlocks {
         ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.SILVER.getMetadata(), "animal_hut_silver");
         ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.WHITE.getMetadata(), "animal_hut_white");
         ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), EnumDyeColor.YELLOW.getMetadata(), "animal_hut_yellow");
+=======
+        for (EnumDyeColor enumdyecolor : EnumDyeColor.values()) {
+            ANIMAL_HUT.registerItemModel(Item.getItemFromBlock(ANIMAL_HUT), enumdyecolor.getMetadata(), enumdyecolor.getName() + "_animal_hut");
+        }
+>>>>>>> i hate git
         BIRD_FEEDER.registerItemModel(Item.getItemFromBlock(BIRD_FEEDER));
         BIRD_HOUSE.registerItemModel(Item.getItemFromBlock(BIRD_HOUSE));
         BUCKET.registerItemModel(Item.getItemFromBlock(BUCKET));

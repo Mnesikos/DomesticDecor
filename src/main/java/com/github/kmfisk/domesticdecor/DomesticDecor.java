@@ -8,6 +8,9 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid = DomesticDecor.MOD_ID, name = "Domestic Decor", version = DomesticDecor.VERSION)
@@ -16,7 +19,7 @@ public class DomesticDecor {
     public static final String VERSION = "@VERSION@";
 
     @SidedProxy(clientSide="com.github.kmfisk.domesticdecor.proxy.ClientProxy", serverSide="com.github.kmfisk.domesticdecor.proxy.CommonProxy")
-    public static CommonProxy PROXY;
+    public static CommonProxy proxy;
 
     @Mod.EventBusSubscriber
     public static class RegistrationHandler {

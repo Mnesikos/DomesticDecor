@@ -31,7 +31,7 @@ public abstract class BlockBase extends Block {
         this.setUnlocalizedName(name);
         this.setRegistryName(DomesticDecor.MOD_ID + ":" + name);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        setCreativeTab(DomesticDecor.PROXY.DOMESTICDECOR);
+        setCreativeTab(DomesticDecor.proxy.DOMESTICDECOR);
     }
 
     @Override
@@ -87,7 +87,7 @@ public abstract class BlockBase extends Block {
     }
 
     public void registerItemModel(Item itemBlock) {
-        DomesticDecor.PROXY.registerItemRenderer(itemBlock, 0, name);
+        DomesticDecor.proxy.registerItemRenderer(itemBlock, 0, name);
     }
 
     public Item createItemBlock() {

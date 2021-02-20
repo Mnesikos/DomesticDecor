@@ -18,7 +18,8 @@ public class BlockAnimalHut extends BlockBaseColored {
         super(name, material);
     }
 
-    @Override @SideOnly(Side.CLIENT)
+    @Override
+    @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT;
     }

@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=south": { "model": "domesticdecor:buckets/dd_bucket" },
-    "facing=west": { "model": "domesticdecor:buckets/dd_bucket", "y": 90 },
-    "facing=north": { "model": "domesticdecor:buckets/dd_bucket", "y": 180 },
-    "facing=east": { "model": "domesticdecor:buckets/dd_bucket", "y": 270 }
-  }
-}

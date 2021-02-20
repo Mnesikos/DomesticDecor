@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=south": { "model": "domesticdecor:bowls/dd_double_bowl", "y": 90 },
-    "facing=west": { "model": "domesticdecor:bowls/dd_double_bowl", "y": 180 },
-    "facing=north": { "model": "domesticdecor:bowls/dd_double_bowl", "y": 270 },
-    "facing=east": { "model": "domesticdecor:bowls/dd_double_bowl" }
-  }
-}

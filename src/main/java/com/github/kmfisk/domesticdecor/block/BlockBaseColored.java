@@ -9,11 +9,13 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.*;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public abstract class BlockBaseColored extends BlockBase {
     public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
@@ -25,7 +27,8 @@ public abstract class BlockBaseColored extends BlockBase {
 
     @Override
     public int damageDropped(IBlockState state) {
-        return (state.getValue(COLOR)).getMetadata();
+        EnumDyeColor enumColour = state.getValue(COLOR);
+        return enumColour.getMetadata();
     }
 
     @Override
@@ -41,15 +44,25 @@ public abstract class BlockBaseColored extends BlockBase {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta & 3)).withProperty(COLOR, EnumDyeColor.byMetadata(meta));
+        EnumFacing facing = EnumFacing.getHorizontal(meta);
+        int colourbits = (meta & 0x0c) >> 2;
+        EnumDyeColor colour = EnumDyeColor.byMetadata(colourbits);
+        return this.getDefaultState().withProperty(COLOR, colour).withProperty(FACING, facing);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        int i = 0;
-        i = i | (state.getValue(FACING)).getHorizontalIndex();
-        i = i | (state.getValue(COLOR)).getMetadata();
-        return i;
+        EnumFacing facing = state.getValue(FACING);
+        EnumDyeColor color = state.getValue(COLOR);
+
+        int facingbits = facing.getHorizontalIndex();
+        int colorbits = color.getMetadata() << 2;
+        return facingbits | colorbits;
+    }
+
+    @Override
+    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+        return state;
     }
 
     @Override
@@ -57,11 +70,19 @@ public abstract class BlockBaseColored extends BlockBase {
         return new BlockStateContainer(this, FACING, COLOR);
     }
 
+    @Override
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
+        EnumDyeColor colour = EnumDyeColor.byMetadata(meta);
+        EnumFacing enumfacing = (placer == null) ? EnumFacing.NORTH : EnumFacing.fromAngle(placer.rotationYaw);
+
+        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(COLOR, colour);
+    }
+
     public void registerItemModel(Item itemBlock, int subType, String id) {
-        DomesticDecor.PROXY.registerItemRenderer(itemBlock, subType, id);
+        DomesticDecor.proxy.registerItemRenderer(itemBlock, subType, id);
     }
 
     public Item createItemBlock() {
-        return new ItemCloth(this).setUnlocalizedName(getUnlocalizedName());
+        return new ItemCloth(this).setRegistryName(getRegistryName());
     }
 }
